@@ -1,0 +1,1 @@
+/home/esawin/work/dotfiles/vim/.vim
