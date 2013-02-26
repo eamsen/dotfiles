@@ -1,0 +1,13 @@
+[user]
+	name = Eugen Sawin
+	email = esawin@me73.com
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  #deltag = push origin :refs/tags/$1

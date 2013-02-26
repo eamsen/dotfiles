@@ -1,0 +1,3 @@
+[submodule "vim"]
+	path = vim
+	url = git@me73.com:moon-vim
