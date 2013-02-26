@@ -14,8 +14,8 @@ nnoremap <leader>y "*Y
 nnoremap <leader>p "*P
 " nnoremap <leader>cc :'c,. s/^/\/\/ /<cr>
 nnoremap <leader>hg :HeaderguardAdd<cr>
-nnoremap <leader>1 :set lines=55 columns=85<CR><C-w>o
-nnoremap <leader>2 :set lines=55 columns=171<CR><C-w>v
+nnoremap <leader>1 :set lines=60 columns=85<CR><C-w>o
+nnoremap <leader>2 :set lines=60 columns=171<CR><C-w>v
 nnoremap <leader>dtr :%s/\s\+$<cr>
 nnoremap <leader><space> :noh<cr>
 " nnoremap / /\v
@@ -75,8 +75,13 @@ set history=500
 
 " status line
 set laststatus=2
-set statusline=%.50F " (almost) full path to file
+set statusline=
+set statusline+=[%n%H%M%R%W]\  " buffer number, and flags
+set statusline+=%.50F " (almost) full path to file
 set statusline+=%= " align right
+set statusline+=%y\  " file type
+set statusline+=[%{&ff}\| " file format
+set statusline+=%{strlen(&fenc)?&fenc:'none'}]\  " file encoding
 set statusline+=%l/%L " line / total lines
 
 " indenting
@@ -107,7 +112,7 @@ set undofile
 " au FocusLost * :wa
 " folding
 " set foldmethod=indent
-set lines=55
+set lines=60
 set columns=85
 " mouse
 set mouse=a
