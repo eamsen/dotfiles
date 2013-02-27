@@ -14,8 +14,8 @@ nnoremap <leader>y "*Y
 nnoremap <leader>p "*P
 " nnoremap <leader>cc :'c,. s/^/\/\/ /<cr>
 nnoremap <leader>hg :HeaderguardAdd<cr>
-nnoremap <leader>1 :set lines=60 columns=85<CR><C-w>o
-nnoremap <leader>2 :set lines=60 columns=171<CR><C-w>v
+nnoremap <leader>1 :set lines=60 columns=110<CR><C-w>o
+nnoremap <leader>2 :set lines=60 columns=220<CR><C-w>v
 nnoremap <leader>dtr :%s/\s\+$<cr>
 nnoremap <leader><space> :noh<cr>
 " nnoremap / /\v
@@ -118,7 +118,7 @@ set undofile
 " folding
 " set foldmethod=indent
 set lines=60
-set columns=85
+set columns=110
 " mouse
 set mouse=a
 

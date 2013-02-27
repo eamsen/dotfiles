@@ -10,4 +10,12 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+	d = diff
+	dt = difftool
   #deltag = push origin :refs/tags/$1
+[diff]
+	tool = gvimdiff
+[merge]
+	tool = gvimdiff
+[difftool]
+	prompt = false
