@@ -73,6 +73,10 @@ set wildignore+=lib
 set cmdheight=1
 set history=500
 
+" powerline settings
+let g:Powerline_stl_path_style = 'short'
+" not working?
+
 " status line
 set laststatus=2
 set statusline=
@@ -83,6 +87,7 @@ set statusline+=%y\  " file type
 set statusline+=[%{&ff}\| " file format
 set statusline+=%{strlen(&fenc)?&fenc:'none'}]\  " file encoding
 set statusline+=%l/%L " line / total lines
+set encoding=utf-8
 
 " indenting
 let &shiftwidth=indentspace
