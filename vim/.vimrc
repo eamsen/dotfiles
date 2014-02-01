@@ -4,9 +4,35 @@
 " Go support
 " set rtp+=$GOROOT/misc/vim
 
+set tags=./.ctags;/
+
+function! SaveSession()
+  let b:sessiondir = $HOME . "/.vim/sessions"
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:filename = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:filename
+endfunction
+
+function! LoadSession()
+  let b:sessiondir = $HOME . "/.vim/sessions"
+  let b:sessionfile = b:sessiondir . "/session.vim"
+  if (filereadable(b:sessionfile))
+    exe 'source ' b:sessionfile
+  else
+    echo "No session loaded."
+  endif
+endfunction
+
+
 let indentspace=2
 " mappings
 let mapleader=","
+
+nnoremap <leader>l :call LoadSession()<CR>
+nnoremap <leader>s :call SaveSession()<CR>
 nnoremap <leader>copy gg<S-o>// Copyright 2013 Eugen Sawin <esawin@me73.com><ESC>
 nnoremap <leader>note <S-o>// Note(esawin): 
 nnoremap <leader>com <S-o>// 
