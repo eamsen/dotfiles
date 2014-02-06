@@ -186,6 +186,8 @@ else
 endif
 syntax on
 
+au BufNewFile,BufRead *.jsm set filetype=javascript
+
 if exists("loaded_headerguard")
     finish
 endif
