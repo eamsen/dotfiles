@@ -1,6 +1,6 @@
 HOMEDIR = /home/$$USER
 
-install: git vim tmux
+install: git vim tmux gdb
 
 git:
 	@ln -sf $(CURDIR)/git/.gitconfig $(HOMEDIR)/.gitconfig
@@ -15,4 +15,8 @@ tmux:
 	@ln -sf $(CURDIR)/tmux/.tmux.conf $(HOMEDIR)/.tmux.conf
 	@echo "Linked $(HOMEDIR)/.tmux.conf"
 
-.PHONY: git vim tmux
+gdb:
+	@ln -sf $(CURDIR)/gdb/.gdbinit $(HOMEDIR)/.gdbinit
+	@echo "Linked $(HOMEDIR)/.gdbinit"
+
+.PHONY: git vim tmux gdb
