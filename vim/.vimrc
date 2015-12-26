@@ -6,6 +6,8 @@
 
 set tags=./.ctags;/
 
+execute pathogen#infect()
+
 function! SaveSession()
   let b:sessiondir = $HOME . "/.vim/sessions"
   if (filewritable(b:sessiondir) != 2)
